@@ -5,9 +5,11 @@
     "start": "ngcc --tsconfig ./tsconfig.app.json && ngc --project ./tsconfig.app.json && concurrently 'npm:watch-ngc' 'npm:watch-vite'",
     "watch-ngc": "ngc --project tsconfig.app.json --watch",
     "watch-vite": "vite serve",
-    "build": "ngcc --tsconfig ./tsconfig.app.json && vite build"
+    "build": "ngcc --tsconfig ./tsconfig.app.json && vite build",
+    "upgrade:angular": "ng update @angular/core @angular/cli"
   },
   "dependencies": {
+    "@angular/cli": "^10",
     "@angular/common": "^10.0.11",
     "@angular/compiler": "^10.0.11",
     "@angular/core": "^10.0.11",
